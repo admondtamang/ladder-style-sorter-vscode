@@ -1,0 +1,25 @@
+'use client';
+
+import { Plus } from 'lucide-react';
+import React, { useCallback, useState } from 'react';
+import { ColumnDef } from '@tanstack/react-table';
+import useSearchParams from '@/hooks/use-search-params';
+import { LEADS_FILTER_PARAMS, useGetLeads } from '@/query/get-leads';
+import Container from '@/components/atoms/container';
+import Portal from '@/components/atoms/portal';
+import TableComponent from '@/components/organisms/table';
+import { PortalIds } from '@/config/portal';
+import Button from '@/components/atoms/button';
+import { ButtonLink } from '@/components/atoms/button-link';
+import { ROUTES } from '@/config/routes';
+import TabSelector from '@/components/atoms/tab-selector';
+import { useSendEmail } from '@/mutations/email-sms/email';
+import { SendEmailSchemaType } from '@/schema/send-email-schema';
+import { useExportLeads } from '@/mutations/leads/export-lead';
+import { useRouter } from 'next/navigation';
+import { Separator } from '@/components/ui/separator';
+import { useGetVisa } from '@/query/get-visa';
+import { useDeleteVisa, useDeleteVisaBulk } from '@/mutations/visa/delete-visa';
+import { IVisa } from '@/types/response-types/visa-response';
+import { useVisaColumn } from '@/config/columns/visa-columns-definitions';
+import { useExportVisaApplicants } from '@/mutations/visa/export-visa-applicants';

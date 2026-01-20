@@ -1,0 +1,44 @@
+{
+  "name": "ladder-style-sorter",
+  "displayName": "Ladder Style Sorter",
+  "description": "Sort import statements by length in ascending order (ladder style)",
+  "version": "1.0.0",
+  "engines": {
+    "vscode": "^1.60.0"
+  },
+  "categories": [
+    "Formatters"
+  ],
+  "activationEvents": [
+    "onCommand:ladderStyleSorter.sortImports"
+  ],
+  "publisher": "admondtamang",
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "ladderStyleSorter.sortImports",
+        "title": "Sort Imports (Ladder Style)"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "ladderStyleSorter.sortImports",
+          "group": "1_modification",
+          "when": "editorTextFocus"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.60.0",
+    "@types/node": "^16.x",
+    "typescript": "^4.5.4"
+  }
+}
