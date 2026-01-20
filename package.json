@@ -14,6 +14,10 @@
   ],
   "publisher": "admondtamang",
   "main": "./out/extension.js",
+  "icon": "icon.png",
+  "repository": {
+    "url": "https://github.com/admondtamang/ladder-style-sorter-vscode"
+  },
   "contributes": {
     "commands": [
       {
