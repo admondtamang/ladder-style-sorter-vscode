@@ -2,7 +2,7 @@
   "name": "ladder-style-sorter",
   "displayName": "Ladder Style Sorter",
   "description": "Sort import statements by length in ascending order (ladder style)",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "engines": {
     "vscode": "^1.60.0"
   },
